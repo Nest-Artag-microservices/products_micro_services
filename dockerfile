@@ -15,6 +15,8 @@ RUN npm install -g pnpm && pnpm install
 # Copia el resto de los archivos del proyecto al directorio de trabajo
 COPY . .
 
+RUN pnpm prisma generate
+
 # Expone el puerto 54123
 EXPOSE 54123
 
